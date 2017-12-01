@@ -16,9 +16,9 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/guitar/details/{iGuitarId}")
+     * @Route("/guitar/details/{i_guitarid}")
      */
-    public function detailsAction($iGuitarId)
+    public function detailsAction($i_guitarid)
     {
         return $this->render('GuitarBundle:Default:index.html.twig');
     }
@@ -43,9 +43,9 @@ class DefaultController extends Controller
 
 
     /**
-     * @Route("/guitar/edit/{iGuitarId}")
+     * @Route("/guitar/edit/{i_guitarid}")
      */
-    public function editFormAction($iGuitarId)
+    public function editFormAction($i_guitarid)
     {
         return $this->render('GuitarBundle:Default:index.html.twig');
     }

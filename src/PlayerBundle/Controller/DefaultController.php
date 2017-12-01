@@ -16,7 +16,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/player/details/{iPlayerId}")
+     * @Route("/player/details/{i_playerid}")
      */
     public function detailsAction($iPlayerId)
     {
@@ -43,7 +43,7 @@ class DefaultController extends Controller
 
 
     /**
-     * @Route("/player/edit/{iPlayerId}")
+     * @Route("/player/edit/{i_playerid}")
      */
     public function editFormAction($iPlayerId)
     {
