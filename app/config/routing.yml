@@ -1,3 +1,13 @@
+guitar:
+    resource: "@GuitarBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+player:
+    resource: "@PlayerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
