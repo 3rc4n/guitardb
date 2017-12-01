@@ -12,7 +12,7 @@ class DefaultController extends Controller
      */
     public function listAction()
     {
-        return $this->render('GuitarBundle:Default:index.html.twig');
+        return $this->render('GuitarBundle::list.html.twig');
     }
 
     /**
@@ -20,7 +20,7 @@ class DefaultController extends Controller
      */
     public function detailsAction($i_guitarid)
     {
-        return $this->render('GuitarBundle:Default:index.html.twig');
+        return $this->render('GuitarBundle::details.html.twig');
     }
 
     /**
@@ -28,7 +28,7 @@ class DefaultController extends Controller
      */
     public function newFormAction()
     {
-        return $this->render('GuitarBundle:Default:index.html.twig');
+        return $this->render('GuitarBundle::newform.html.twig');
     }
 
 
@@ -38,7 +38,7 @@ class DefaultController extends Controller
      */
     public function insertAction()
     {
-        return $this->render('GuitarBundle:Default:index.html.twig');
+        return new Response('<h2>Success</h2>');
     }
 
 
@@ -47,7 +47,7 @@ class DefaultController extends Controller
      */
     public function editFormAction($i_guitarid)
     {
-        return $this->render('GuitarBundle:Default:index.html.twig');
+        return $this->render('GuitarBundle::editform.html.twig');
     }
 
     /**
@@ -56,6 +56,6 @@ class DefaultController extends Controller
      */
     public function updateAction()
     {
-        return $this->render('GuitarBundle:Default:index.html.twig');
+        return new Response('<h2>Success</h2>');
     }
 }

@@ -12,50 +12,50 @@ class DefaultController extends Controller
      */
     public function listAction()
     {
-        return $this->render('PlayerBundle:Default:index.html.twig');
+        return $this->render('PlayerBundle::list.html.twig');
     }
 
     /**
      * @Route("/player/details/{i_playerid}")
      */
-    public function detailsAction($iPlayerId)
+    public function detailsAction($i_playerid)
     {
-        return $this->render('PlayerBundle:Default:index.html.twig');
+        return $this->render('PlayerBundle::details.html.twig');
     }
 
     /**
      * @Route("/player/add")
      */
-    public function addFormAction()
+    public function newFormAction()
     {
-        return $this->render('PlayerBundle:Default:index.html.twig');
+        return $this->render('PlayerBundle::newform.html.twig');
     }
 
 
     /**
-     * @Route("/player/insert")
+     * @Route("/player/add")
      * @method("post")
      */
     public function insertAction()
     {
-        return $this->render('PlayerBundle:Default:index.html.twig');
+        return $this->render('<h2>Success</h2>');
     }
 
 
     /**
      * @Route("/player/edit/{i_playerid}")
      */
-    public function editFormAction($iPlayerId)
+    public function editFormAction($i_playerid)
     {
-        return $this->render('PlayerBundle:Default:index.html.twig');
+        return $this->render('PlayerBundle::editform.html.twig');
     }
 
     /**
-     * @Route("/player/update")
+     * @Route("/player/edit")
      * @method("post")
      */
     public function updateAction()
     {
-        return $this->render('PlayerBundle:Default:index.html.twig');
+        return $this->render('<h2>Success</h2>');
     }
 }
