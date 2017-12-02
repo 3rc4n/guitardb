@@ -2,6 +2,29 @@
 
 {% block main %}
     <h1>List of guitars</h1>
+
     {# ToDo: Add some text here! #}
-    {# ToDo: Add a list here! #}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Edit</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if guitars %}
+            {% for i in guitars %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td>No guitars available</td>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
+
 {% endblock %}

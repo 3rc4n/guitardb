@@ -12,7 +12,11 @@ class DefaultController extends Controller
      */
     public function listAction()
     {
-        return $this->render('GuitarBundle::list.html.twig');
+        $o_guitarrepo = $this->getDoctrine()->getRepository('GuitarBundle:Guitar');
+
+        $a_guitars = $o_guitarrepo->findAll();
+
+        return $this->render('GuitarBundle::list.html.twig', ['guitars' => $a_guitars]);
     }
 
     /**

@@ -3,6 +3,29 @@
 
 {% block main %}
     <h1>List of players</h1>
+
     {# ToDo: Add some text here! #}
-    {# ToDo: Add a list here! #}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% if players %}
+            {% for i in players %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td><a href="/player/edit/{{ i.id }}" class="btn btn-primary">Edit</a></td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td>No players available</td>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
 {% endblock %}

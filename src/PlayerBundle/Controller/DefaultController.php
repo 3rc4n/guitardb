@@ -12,7 +12,11 @@ class DefaultController extends Controller
      */
     public function listAction()
     {
-        return $this->render('PlayerBundle::list.html.twig');
+        $o_playerrepo = $this->getDoctrine()->getRepository('PlayerBundle:Player');
+
+        $a_players = $o_playerrepo->findAll();
+
+        return $this->render('PlayerBundle::list.html.twig', ['players' => $a_players]);
     }
 
     /**
