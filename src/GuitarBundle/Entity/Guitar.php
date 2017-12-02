@@ -3,6 +3,7 @@
 namespace GuitarBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Tests\Model;
 
 /**
  * Guitar
@@ -28,6 +29,12 @@ class Guitar
      */
     private $name;
 
+    /**
+     * @var Brands
+     *
+     * @ORM\ManyToOne(targetEntity="GuitarBundle\Entity\Brands", inversedBy="id")
+     */
+    private $brand;
 
     /**
      * Get id

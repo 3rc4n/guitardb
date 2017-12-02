@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ee0b3e9-6381-4aed-8a34-86e0e56c1463" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/PlayerBundle/Resources/views/details.html.twig" afterPath="$PROJECT_DIR$/src/PlayerBundle/Resources/views/details.html.twig" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/GuitarBundle/Entity/Guitar.php" afterPath="$PROJECT_DIR$/src/GuitarBundle/Entity/Guitar.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="details.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="details.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayerBundle/Resources/views/details.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,6 +105,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Guitar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GuitarBundle/Entity/Guitar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="62" />
+              <folding>
+                <element signature="e#39#71#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -139,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/GuitarBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/PlayerBundle/Entity/Player.php" />
         <option value="$PROJECT_DIR$/src/PlayerBundle/Resources/views/details.html.twig" />
+        <option value="$PROJECT_DIR$/src/GuitarBundle/Entity/Guitar.php" />
       </list>
     </option>
   </component>
@@ -333,7 +347,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21216000" />
+    <option name="totallyTimeSpent" value="23468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1922" height="932" extended-state="7" />
@@ -605,6 +619,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,14 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GuitarBundle/Entity/Guitar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,9 +753,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayerBundle/Resources/views/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GuitarBundle/Entity/Guitar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="62" />
+          <folding>
+            <element signature="e#39#71#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
