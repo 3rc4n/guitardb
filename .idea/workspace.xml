@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ee0b3e9-6381-4aed-8a34-86e0e56c1463" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/PlayerBundle/Entity/Player.php" afterPath="$PROJECT_DIR$/src/PlayerBundle/Entity/Player.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="Player.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayerBundle/Entity/Player.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -334,7 +333,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20451000" />
+    <option name="totallyTimeSpent" value="20751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1922" height="932" extended-state="7" />
@@ -739,8 +738,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayerBundle/Entity/Player.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding />
         </state>
       </provider>

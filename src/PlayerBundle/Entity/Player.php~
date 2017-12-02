@@ -36,6 +36,13 @@ class Player
     private $dateofbirth;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(type="text")
+     */
+    private $about;
+
+    /**
      * Get id
      *
      * @return int
@@ -91,5 +98,29 @@ class Player
     public function getDateofbirth()
     {
         return $this->dateofbirth;
+    }
+
+    /**
+     * Set about
+     *
+     * @param string $about
+     *
+     * @return Player
+     */
+    public function setAbout($about)
+    {
+        $this->about = $about;
+
+        return $this;
+    }
+
+    /**
+     * Get about
+     *
+     * @return string
+     */
+    public function getAbout()
+    {
+        return $this->about;
     }
 }
