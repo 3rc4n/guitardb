@@ -3,16 +3,16 @@
 {%  block title %}About {{  player.name }}{% endblock %}
 
 {% block main %}
+
     <h1>About {{ player.name }}</h1>
 
-    <section>
-        {% if player.dateofbirth %}
-            <div class="row">
-                <div class="col">Date of birth:</div>
-                <div class="col">{{  player.dateofbirth }}</div>
-            </div>
-        {% endif %}
-    </section>
+    {% if player.dateofbirth %}
+        <div class="row">
+            <div class="col">Date of birth:</div>
+            <div class="col">{{  player.dateofbirth }}</div>
+        </div>
+    {% endif %}
+
 
     <article>
         <p>
