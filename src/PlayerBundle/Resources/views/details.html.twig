@@ -4,5 +4,23 @@
 
 {% block main %}
     <h1>About {{ player.name }}</h1>
-    {# ToDo: Add more info here! #}
+
+    <section>
+        {% if player.dateofbirth %}
+            <div class="row">
+                <div class="col">Date of birth:</div>
+                <div class="col">{{  player.dateofbirth }}</div>
+            </div>
+        {% endif %}
+    </section>
+
+    <article>
+        <p>
+            {% if player.about %}
+                {{  player.about }}
+            {% else %}
+                There is nothing to say about this guitar player (yet).
+            {% endif %}
+        </p>
+    </article>
 {% endblock %}
