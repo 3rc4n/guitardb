@@ -3,7 +3,6 @@
 namespace PlayerBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Player
@@ -30,11 +29,11 @@ class Player
     private $name;
 
     /**
-     * @var datetime
+     * @var \DateTime
      *
-     * @ORM\Column(name="dateofbirth", type="date")
+     * @ORM\Column(name="dateofbirth", type="date", nullable=true)
      */
-    private $dateofbirth = null;
+    private $dateofbirth;
 
     /**
      * Get id
@@ -69,7 +68,6 @@ class Player
     {
         return $this->name;
     }
-
 
     /**
      * Set dateofbirth

@@ -27,7 +27,14 @@ class Player
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
-    
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateofbirth", type="date", nullable=true)
+     */
+    private $dateofbirth;
+
     /**
      * Get id
      *
@@ -61,5 +68,28 @@ class Player
     {
         return $this->name;
     }
-}
 
+    /**
+     * Set dateofbirth
+     *
+     * @param \DateTime $dateofbirth
+     *
+     * @return Player
+     */
+    public function setDateofbirth($dateofbirth)
+    {
+        $this->dateofbirth = $dateofbirth;
+
+        return $this;
+    }
+
+    /**
+     * Get dateofbirth
+     *
+     * @return \DateTime
+     */
+    public function getDateofbirth()
+    {
+        return $this->dateofbirth;
+    }
+}
