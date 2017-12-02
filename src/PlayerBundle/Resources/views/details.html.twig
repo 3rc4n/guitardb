@@ -1,8 +1,8 @@
 {% extends "base.html.twig" %}
 
-{%  block title %}About {{  player }}{% endblock %}
+{%  block title %}About {{  player.name }}{% endblock %}
 
 {% block main %}
-    <h1>About {{ player }}</h1>
+    <h1>About {{ player.name }}</h1>
     {# ToDo: Add more info here! #}
 {% endblock %}

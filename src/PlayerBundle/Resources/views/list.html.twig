@@ -6,11 +6,15 @@
 
     {# ToDo: Add some text here! #}
 
+    <div>
+        <a href="{{ path("player_add_form") }}" class="btn btn-primary">Add a player</a>
+    </div>
+
     <table class="table">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Edit</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +22,7 @@
             {% for i in players %}
                 <tr>
                     <td>{{ i.name }}</td>
-                    <td><a href="/player/edit/{{ i.id }}" class="btn btn-primary">Edit</a></td>
+                    <td><a href="{{ path("player_details", {'i_playerid': i.id}) }}" class="btn btn-primary">More</a></td>
                 </tr>
             {% endfor %}
         {% else %}
