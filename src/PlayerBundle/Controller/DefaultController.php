@@ -6,12 +6,16 @@
 namespace PlayerBundle\Controller;
 
 //use Doctrine\DBAL\Types\TextType;
+use PlayerBundle\Entity\Player;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class DefaultController
@@ -53,28 +57,46 @@ class DefaultController extends Controller
     /**
      * @Route("/player/add", name="player_add_form")
      */
-    public function newFormAction()
+    public function newFormAction(Request $o_request)
     {
         // Generate a form
-        $o_form = $this->createFormBuilder()
-            ->add('Date_of_birth', TextType::class)
-            ->add('About', TextType::class)
-            ->add('submit', SubmitType::class)
+
+        $o_player = new Player();
+
+        $o_form = $this->createFormBuilder($o_player)
+            ->add('name',TextType::class, array( 'attr' => array('class'=>'form-control') ))
+            ->add('dateofbirth', DateType::class, array(
+                                                                'attr' => array('class'=>'form-control'),
+                                                                'format' => 'yyyy-MM-dd',
+                                                                'years' => range(1900, date('Y'))
+                )
+            )
+            ->add('about', TextareaType::class, array( 'attr' => array('class'=>'form-control') ))
+            ->add('save', SubmitType::class, array( 'attr' => array( 'type'=>'button', 'id' => 'btnSave', 'class'=>'btn btn-primary') ))
             ->getForm();
+
+        $o_form->handleRequest($o_request);
+
+        if ($o_form->isSubmitted() && $o_form->isValid()) {
+
+            $o_player = $o_form->getData();
+
+            $o_em = $this->getDoctrine()->getManager();
+            $o_em->persist($o_player);
+            $o_em->flush();
+
+            return $this->redirectToRoute('player_add_success');
+        }
+
 
         return $this->render('PlayerBundle::newform.html.twig', [ 'form' => $o_form->createView() ]);
     }
-
-
     /**
-     * @Route("/player/add", name="player_add_post")
-     * @method("post")
+     * @Route("/player/add/success", name="player_add_success")
      */
-    public function insertAction()
-    {
-        return $this->render('<h2>Success</h2>');
+    public function successNewFormAction() {
+        return $this->render('PlayerBundle::newsuccess.html.twig');
     }
-
 
     /**
      * @Route("/player/edit/{i_playerid}", name="player_edit_form")
