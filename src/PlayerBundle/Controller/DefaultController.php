@@ -5,8 +5,13 @@
 
 namespace PlayerBundle\Controller;
 
+//use Doctrine\DBAL\Types\TextType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
 
 /**
  * Class DefaultController
@@ -50,7 +55,14 @@ class DefaultController extends Controller
      */
     public function newFormAction()
     {
-        return $this->render('PlayerBundle::newform.html.twig');
+        // Generate a form
+        $o_form = $this->createFormBuilder()
+            ->add('Date_of_birth', TextType::class)
+            ->add('About', TextType::class)
+            ->add('submit', SubmitType::class)
+            ->getForm();
+
+        return $this->render('PlayerBundle::newform.html.twig', [ 'form' => $o_form->createView() ]);
     }
 
 

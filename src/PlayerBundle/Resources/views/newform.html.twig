@@ -3,6 +3,10 @@
 
 {% block main %}
     <h1>Add a new player</h1>
+
     {# ToDo: Add some text here! #}
-    {# ToDo: Add a list here! #}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 {% endblock %}
