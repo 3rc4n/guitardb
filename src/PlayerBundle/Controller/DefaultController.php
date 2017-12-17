@@ -16,6 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints as Asserts;
 
 /**
  * Class DefaultController
@@ -27,7 +28,7 @@ class DefaultController extends Controller
     /**
      * @Route("/player"), name="player_list")
      */
-    public function listAction()
+    public function listAction(Request $request)
     {
         // Get the repository for selections
         $o_playerrepo = $this->getDoctrine()->getRepository('PlayerBundle:Player');
@@ -35,8 +36,27 @@ class DefaultController extends Controller
         // Get (find) all entries
         $a_players = $o_playerrepo->findAll();
 
+        // The search form
+        $form = $this->createFormBuilder()
+            ->setMethod('GET')
+            ->add('search', TextType::class, [
+                'constraints' => [
+                    new Asserts\NotBlank(),
+                    new Asserts\Length(
+                        array( 'min' => 2, 'minMessage' => "Too short")
+                    )
+                ]
+            ])
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
+            die("Form submitted");
+        }
+
         // Render the template with the search results
-        return $this->render('PlayerBundle::list.html.twig', ['players' => $a_players]);
+        return $this->render('PlayerBundle::list.html.twig', ['players' => $a_players, 'form' => $form->createView()]);
     }
 
     /**
